@@ -1,0 +1,280 @@
+/* Admin Page Styles */
+
+.admin-page {
+  min-height: 100vh;
+  background-color: #e5e7eb;
+}
+
+.admin-container {
+  padding: 1rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.admin-header {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-title {
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.admin-count {
+  font-size: 8px;
+  color: #4b5563;
+}
+
+.admin-new-btn {
+  font-size: 10px;
+}
+
+.admin-loading {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 10px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .admin-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.admin-card-inactive {
+  opacity: 0.5;
+}
+
+.admin-card-header {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-card-header-inactive {
+  background: #9ca3af;
+}
+
+.admin-card-status {
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.admin-card-status-on {
+  background-color: #86efac;
+}
+
+.admin-card-status-off {
+  background-color: #fca5a5;
+}
+
+.admin-card-body {
+  padding: 0.75rem;
+}
+
+.admin-card-avatar {
+  font-size: 2.25rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.admin-card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+  font-size: 7px;
+  margin-bottom: 0.5rem;
+}
+
+.admin-stat {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.admin-stat-hp {
+  background-color: #fee2e2;
+}
+
+.admin-stat-atk {
+  background-color: #ffedd5;
+}
+
+.admin-stat-spd {
+  background-color: #dcfce7;
+}
+
+.admin-card-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.admin-action-btn {
+  font-size: 8px;
+}
+
+.admin-action-btn-toggle {
+  flex: 1;
+}
+
+.admin-action-btn-delete {
+  color: #dc2626;
+}
+
+/* ========== AVATAR IMAGE ========== */
+.admin-avatar-img {
+  width: 35%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ========== GIF PREVIEW ========== */
+.admin-gif-preview {
+  margin-top: 8px;
+  max-width: 120px;
+  max-height: 120px;
+  border: 3px solid #303030;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ========== MODAL ========== */
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.admin-modal {
+  padding: 1rem;
+  width: 100%;
+  max-width: 32rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.admin-modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.admin-modal-title {
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.admin-modal-close {
+  font-size: 10px;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.admin-form-label {
+  font-size: 10px;
+  color: #374151;
+}
+
+.admin-avatar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.admin-avatar-btn {
+  font-size: 1.25rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: #f3f4f6;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-avatar-btn-selected {
+  background-color: #bfdbfe;
+  box-shadow: 0 0 0 2px #60a5fa;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.admin-stat-field {
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.admin-stat-label {
+  font-size: 8px;
+  color: #4b5563;
+  display: block;
+}
+
+.admin-stat-input {
+  font-size: 10px;
+  text-align: center;
+}
+
+.admin-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.admin-skill-box {
+  padding: 0.5rem;
+}
+
+.admin-skill-input {
+  font-size: 10px;
+  margin-bottom: 0.25rem;
+}
+
+.admin-skill-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+}
+
+.admin-skill-select {
+  font-size: 8px;
+}
+
+.admin-skill-number {
+  font-size: 8px;
+}
+
+.admin-form-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.admin-form-btn {
+  flex: 1;
+}

@@ -1,0 +1,75 @@
+/* Register Page Styles */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(to bottom, #4ade80, #16a34a);
+}
+
+.register-container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.register-icon {
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+.register-title {
+  font-size: 1.125rem;
+  color: #1f2937;
+}
+
+.register-error {
+  background-color: #fee2e2;
+  border: 2px solid #f87171;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 10px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-label {
+  display: block;
+  font-size: 10px;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.register-footer {
+  text-align: center;
+  font-size: 10px;
+  color: #4b5563;
+  margin-top: 1rem;
+}
+
+.register-footer a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}

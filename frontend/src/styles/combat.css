@@ -1,0 +1,411 @@
+/* Combat Page Styles */
+
+/* ========== LAYOUT ========== */
+.combat-page {
+  min-height: 100vh;
+  background-color: #e5e7eb;
+}
+
+.combat-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.combat-loading-text {
+  padding: 1.5rem;
+  font-size: 10px;
+}
+
+/* ========== SELECTION PHASE ========== */
+.selection-container {
+  padding: 1rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.selection-header {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.selection-title {
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.selection-subtitle {
+  font-size: 8px;
+  color: #16a34a;
+  margin-top: 0.25rem;
+}
+
+.no-characters {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.no-characters-text {
+  font-size: 10px;
+  color: #4b5563;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* ========== CHARACTER GRID ========== */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .character-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.character-select-card {
+  cursor: pointer;
+}
+
+.character-select-card:hover {
+  box-shadow: 0 0 0 2px #60a5fa;
+}
+
+.character-card-name {
+  font-size: 10px;
+}
+
+.character-card-body {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.character-avatar {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.character-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25rem;
+  font-size: 8px;
+}
+
+.stat-hp {
+  background-color: #fee2e2;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.stat-mp {
+  background-color: #dbeafe;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.stat-atk {
+  background-color: #ffedd5;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.stat-spd {
+  background-color: #dcfce7;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+/* ========== CHARACTER GIF ========== */
+.character-gif {
+  width: 400%;
+  height: 400%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+/* ========== COMBAT PHASE ========== */
+.combat-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.arena {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-image: url('../images/Fond_GameFight.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 670px;
+  min-width: 1024px;
+}
+
+/* ========== HP BARS ========== */
+.hp-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hp-label {
+  font-size: 11px;
+  color: #ca8a04;
+}
+
+.hp-value {
+  font-size: 11px;
+  color: #4b5563;
+}
+
+/* ========== ENEMY UI ========== */
+.enemy-stats-box {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 16px;
+  width: 288px;
+}
+
+.enemy-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.enemy-avatar {
+  position: absolute;
+  top: 120px;
+  right: 475px;
+  font-size: 140px;
+}
+
+/* ========== PLAYER UI ========== */
+.player-stats-box {
+  position: absolute;
+  bottom: -420px;
+  right: -1180px;
+  padding: 16px;
+  width: 320px;
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.mp-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.mp-label {
+  font-size: 11px;
+  color: #2563eb;
+}
+
+.mp-bar {
+  flex: 1;
+  background-color: #d1d5db;
+  height: 10px;
+  border-radius: 4px;
+}
+
+.mp-bar-inner {
+  background-color: #3b82f6;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.mp-value {
+  font-size: 11px;
+  color: #4b5563;
+}
+
+.player-avatar {
+  position: absolute;
+  bottom: 48px;
+  left: 445px;
+  font-size: 160px;
+  transform: scaleX(-1);
+}
+
+/* ========== BOTTOM UI ========== */
+.combat-ui {
+  background-color: #f3f4f6;
+  border-top: 4px solid #1f2937;
+}
+
+.result-container {
+  padding: 1rem;
+}
+
+.result-message-box {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result-message {
+  font-size: 0.875rem;
+}
+
+.result-victory {
+  color: #16a34a;
+}
+
+.result-defeat {
+  color: #dc2626;
+}
+
+.result-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* ========== ACTION UI ========== */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.message-box {
+  padding: 1.5rem;
+  border-right: 4px solid #1f2937;
+}
+
+.message-inner {
+  padding: 1rem;
+  height: 100%;
+}
+
+.message-text {
+  font-size: 13px;
+  color: #1f2937;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.skill-btn {
+  text-align: left;
+  padding: 14px 18px;
+}
+
+.skill-btn-disabled {
+  opacity: 0.5;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-size: 12px;
+}
+
+.skill-type {
+  font-size: 8px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.skill-type-attack {
+  background-color: #ffedd5;
+  color: #ea580c;
+}
+
+.skill-type-special {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.skill-type-heal {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.skill-type-defense {
+  background-color: #f3e8ff;
+  color: #9333ea;
+}
+
+.skill-info {
+  font-size: 9px;
+  color: #6b7280;
+}
+
+/* ========== COMBAT LOGS ========== */
+.combat-logs {
+  margin: 1rem;
+  padding: 0;
+  max-height: 150px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.combat-logs-header {
+  font-size: 10px;
+  padding: 0.75rem;
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #303030;
+  color: #1f2937;
+}
+
+.combat-logs-content {
+  padding: 0.75rem;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.combat-log-entry {
+  font-size: 8px;
+  color: #374151;
+  line-height: 1.5;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.combat-log-entry:last-child {
+  border-bottom: none;
+}
